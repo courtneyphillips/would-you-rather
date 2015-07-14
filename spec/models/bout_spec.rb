@@ -1,5 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Bout, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Bout do
+    it { should have_many :comments }
+    it { should have_many :options }
 end
