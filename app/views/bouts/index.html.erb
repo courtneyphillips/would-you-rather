@@ -1,11 +1,16 @@
-<h1>All Bouts:</h1>
-
+<h1>All bouts</h1>
 <ul id="bouts">
+
   <% @bouts.each do |bout| %>
-   Bout <%= bout.id %>:
-    <% bout.options.each do |option| %>
-      <li class="option"><%= option.name %></li>
-    <% end %>
+    <li><%= link_to "Bout bout.id ", bout_path(bout) %></li>
+      <ul>
+        <% bout.options.order(created_at: :desc).each do |option| %>
+        
+
+
+        <% end %>
+      </ul>
   <% end %>
 </ul>
-<%= link_to "New Bout", new_bout_path, id: "new_bout_link", remote: true %>
+
+<%= link_to "New Bout", new_bout_path, id: "new_bout_link", class:"btn btn-default", remote: true %>

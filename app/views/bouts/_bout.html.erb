@@ -1,8 +1,6 @@
-<li>
-  <%= link_to @bout.name, question_path(@bout) %>
+<li><%= link_to "Bout bout.id ", bout_path(bout) %></li>
   <ul>
-    <% @bout.options.each do |option| %>
-      <li> <%= option.description %> </li>
-    <% end %>
+    <% bout.options.order(created_at: :desc).each do |option| %>
+
   </ul>
-</li>
+<% end %>

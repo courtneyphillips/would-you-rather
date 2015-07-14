@@ -15,14 +15,14 @@ class BoutsController < ApplicationController
 
   def create
     @bout = Bout.new(bout_params)
-    # if @bout.save()
-    #   respond_to do |format|
-    #     format.html {redirect_to bouts_path}
-    #     format.js
-    #   end
-    # else
-    #   render :new
-    # end
+    if @bout.save()
+      respond_to do |format|
+        format.html {redirect_to bouts_path}
+        format.js
+      end
+    else
+      render :new
+    end
   end
 
   private
