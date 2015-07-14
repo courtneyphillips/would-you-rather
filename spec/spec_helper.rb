@@ -10,7 +10,10 @@
 # individual file that may not need all of that loaded. Instead, consider making
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
-# it.
+# it.ii
+
+require 'simplecov'
+SimpleCov.start
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
