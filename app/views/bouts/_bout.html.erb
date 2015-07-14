@@ -1,0 +1,8 @@
+<li>
+  <%= link_to @bout.name, question_path(@bout) %>
+  <ul>
+    <% @bout.options.each do |option| %>
+      <li> <%= option.description %> </li>
+    <% end %>
+  </ul>
+</li>

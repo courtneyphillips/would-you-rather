@@ -1,10 +1,11 @@
 <h1>All Bouts:</h1>
 
-<% @bouts.each do |bout| %>
-  <%= bout.name %>
-  <%= bout.options.each do |option| %>
-    <%= option.name %>
+<ul id="bouts">
+  <% @bouts.each do |bout| %>
+   Bout <%= bout.id %>:
+    <% bout.options.each do |option| %>
+      <li class="option"><%= option.name %></li>
+    <% end %>
   <% end %>
-<% end %>
-
-<%= link_to "New Bout", new_bout_option_path, id: "new_bout_option", remote: true %>
+</ul>
+<%= link_to "New Bout", new_bout_path, id: "new_bout_link", remote: true %>

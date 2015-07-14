@@ -1,1 +1,16 @@
-tessssst
+<%= form_for @bout, id: "new_bout", remote: true, authenticity_token: true do |f| %>
+  <%= f.fields_for :options do |option_fields| %>
+    <%= option_fields.label :name %>
+    <%= option_fields.text_field :name %>
+    <%= option_fields.label :description, "Option A" %>
+    <%= option_fields.text_field :description %>
+  <% end %>
+<br />
+  <%= f.fields_for :options do |option_fields| %>
+  <%= option_fields.label :name %>
+  <%= option_fields.text_field :name %>
+    <%= option_fields.label :description, "Option B" %>
+    <%= option_fields.text_field :description %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
