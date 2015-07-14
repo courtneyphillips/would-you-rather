@@ -3,7 +3,7 @@ class OptionsController < ApplicationController
   def index
     @options = Option.all
   end
-  # 
+  #
   # def show
   # end
   #
@@ -12,16 +12,17 @@ class OptionsController < ApplicationController
   #   @option = @bout.options.new
   # end
 
-  # def create
-  #   @bout = Bout.find(params[:bout_id])
-  #   @option = @bout.options.create(option_params)
-  #   if @option.save
-  #     flash[:notice] = "Option saved!"
-  #     redirect_to bout_path(@bout)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def update
+      @bout = Bout.find(params[:bout_id])
+      @option = @bout.options.find(params[:id])
+      if @option.update(votes: @option.votes + 1)
+        respond_to do |format|
+          format.html { redirect_to bouts_path }
+          format.js
+        end
+      end
+    end
+
 
   private
 
