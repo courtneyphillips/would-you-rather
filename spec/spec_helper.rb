@@ -10,8 +10,10 @@
 # individual file that may not need all of that loaded. Instead, consider making
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
-# it.ii
+# it.
 
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 require 'simplecov'
 SimpleCov.start
 #
