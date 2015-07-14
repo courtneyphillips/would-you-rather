@@ -4,7 +4,7 @@
     <li><%= link_to bout.options.name, bout_path(bout) %></li>
       <ul>
         <% bout.options.order(created_at: :desc).each do |option| %>
-        <li class="option"><span id="vote_button"><%= link_to "vote", bout_option_path(bout, option), remote: true, method: :patch %></span> <%= option.description %> - <span id="<%= option.id %>" class="votes"><%= option.votes %></span></li>
+        <li class="option"><span id="<%= option.bout_id %>"><%= link_to "vote", bout_option_path(bout, option), remote: true, method: :patch %></span> <%= option.description %> - <span id="<%= option.id %>" class="votes_<%=option.bout_id %>"><%= option.votes %></span></li>
         <% end %>
       </ul>
   <% end %>
