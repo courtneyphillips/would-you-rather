@@ -3,7 +3,14 @@ class CommentsController < ApplicationController
   def create
     @bout = Bout.find(params[:bout_id])
     @comment = @bout.comments.create(comment_params)
-    redirect_to bout_path(@bout)
+    if @comment.save()
+      respond_to do |format|
+        format.html {redirect_to bout_path(@bout)}
+        format.js
+      end
+    else
+      render :new
+    end
   end
 
   def edit
@@ -13,7 +20,6 @@ class CommentsController < ApplicationController
     @bout = Bout.find(params[:bout_id])
     @comment = @bout.comments.new
   end
-
 
   def update
   end
