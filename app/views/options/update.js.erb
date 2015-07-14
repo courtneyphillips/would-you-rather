@@ -1,1 +1,4 @@
+
+$('#vote_button').remove();
+$('span#<%= @option.id %>').show();
 $(".option span#<%= @option.id %>").text("<%= @option.votes %>");
