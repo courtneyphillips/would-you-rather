@@ -1,12 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/would-you-rather/spec/models/bout_spec.rb": [
+      "/Users/Guest/Desktop/would-you-rather/spec/controllers/bouts_controller_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
+        null,
         null
       ],
       "/Users/Guest/Desktop/would-you-rather/spec/rails_helper.rb": [
@@ -240,6 +239,13 @@
         null,
         null,
         null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -297,6 +303,54 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/would-you-rather/app/helpers/bouts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/would-you-rather/app/controllers/bouts_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/would-you-rather/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/would-you-rather/spec/helpers/bouts_helper_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/would-you-rather/spec/models/bout_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/would-you-rather/app/models/bout.rb": [
         1,
         1,
@@ -334,6 +388,6 @@
         null
       ]
     },
-    "timestamp": 1436896213
+    "timestamp": 1436896933
   }
 }
