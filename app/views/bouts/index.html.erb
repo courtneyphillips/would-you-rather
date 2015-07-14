@@ -1,0 +1,9 @@
+<h1>All Bouts:</h1>
+
+<% @bouts.each do |bout| %>
+  <%= bout.name %>
+  <%= bout.options.each do |option| %>
+    <%= option.name %>
+  <% end %>
+<% end %>
+  
