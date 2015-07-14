@@ -1,1 +1,10 @@
-yay
+<%= link_to "New Comment", new_bout_comment_path(@bout), id: "new_comment_link", class:"btn btn-default", remote: true %>
+<hr>
+<div id="comments">
+  <h4>This bout has <%= @bout.comments.count %> comments:</h4><br>
+  <% @bout.comments.each do |comment| %>
+    <hr>
+    <strong>Name:</strong> <%= comment.name %><br><br>
+    <strong>Body:</strong> <%= comment.body %>
+  <% end %>
+</div>
